@@ -9,6 +9,7 @@ import Contato from "./components/Contact";
 import NavBar from "./components/Navbar";
 import Header from "./components/Header";
 import Produto from "./components/Produto";
+import Footer from "./components/Footer";
 
 function Routes() {
   return (
@@ -21,6 +22,7 @@ function Routes() {
         <Route path="/sobre" exact component={Sobre} />
         <Route path="/contato" exact component={Contato} />
       </Switch>
+      <Footer />
     </BrowserRouter>
   );
 }
