@@ -1,7 +1,13 @@
+import React from "react";
+import "bootstrap/dist/css/bootstrap.min.css";
+import "./Global.css";
+import Routes from "./Routes";
 
 function App() {
   return (
-    <h1>Hello World</h1>
+    <>
+      <Routes />
+    </>
   );
 }
 
