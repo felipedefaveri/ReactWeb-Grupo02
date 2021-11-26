@@ -1,3 +1,14 @@
+
+import React from 'react'
+
+function Home() {
+    return <div></div>
+        
+    
+}
+
+
+
 import React, { useState, useEffect } from "react";
 import ProdutoCard from "../../components/ProdutoCard";
 import api from "../../Services/api";
@@ -31,3 +42,4 @@ function Home() {
 }
 
 export default Home;
+
