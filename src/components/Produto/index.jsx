@@ -5,22 +5,19 @@ function Produto(){
 
     const [data,setData] = useState([])
 
-const getProdutos = async()=>{
-    fetch("https://ecommerce-residencia.herokuapp.com/produto").then((response)=> response.json())
-    .then((responseJson)=>(setData(responseJson)
-    ))
-}
-
-useEffect(
-    ()=>{
-        getProdutos()
-    },[]
-)
+    useEffect(() => {
+        api
+          .get("/produto")
+          .then((response) => setData(response.data))
+          .catch((err) => {
+            console.error("ops! ocorreu um erro" + err);
+          });
+      }, []);
 return(
     <div><h1>Listar</h1>
    
         <body>
-            {Object.values(data).map(produto =>(
+                {Object.values(data).map(produto =>(
               <div key={produto.id}>
                   <div>{produto.id}</div>
                   <div>{produto.nome}</div>
